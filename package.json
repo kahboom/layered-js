@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": false,
   "author": {
-    "name": "Intellinode",
-    "email": "info@intellinode.com"
+    "name": "Rachel Yordán",
+    "email": "rachel@nerdycode.com"
   },
   "main": "app.js",
   "scripts": {
