@@ -24,8 +24,8 @@
 17 verbose afterAdd /Users/kahboom/.npm/parallax/1.0.0/package/package.json written
 18 silly publish { name: 'parallax',
 18 silly publish   version: '1.0.0',
-18 silly publish   private: true,
-18 silly publish   author: { name: 'Intellinode', email: 'info@intellinode.com' },
+18 silly publish   private: false,
+18 silly publish   author: { name: 'Rachel Yordán', email: 'rachel@nerdycode.com' },
 18 silly publish   main: 'app.js',
 18 silly publish   scripts: { start: 'node app' },
 18 silly publish   dependencies:
@@ -40,31 +40,58 @@
 18 silly publish      sequelize: '^2.0.3' },
 18 silly publish   readme: '# parallax\nLeveraging object-oriented JavaScript to create a highly scalable, multi-layered API (for larger applications). Use multiple ORMs, environment-specific configuration settings, and much more. Still a WIP.\n\nOrder of communication: `api/controller > service layer > repository layer > models`\n\n`/src/`:\n- `/api`: Used to route requests, currently using ExpressJS as an example, but is not necessary. These can be thought of as controllers. Instantiates models as necessary.\n-  `/models`: Define schemas for multiple ORMs for each model. This section needs to be improved to be more adaptable across each ORM. Still a work-in-progress.\n- `/repositories`: A repository layer! Not usually seen or used in node.js, but it\'s a very useful abstraction layer to allow for multiple data stores. This is often used for large-scale applications, especially those that have to deal with integration of third-party or legacy software.\n- `/services`: Services, which can be created for working specifically with third-party applications or APIs, such as Facebook. This data is not usually stored so wouldn\'t need to have a repository or model.\n- `/utils`: A convenience utility, not really used much in this application except for containing additional authentication processing. This should be moved elsewhere, or maybe omitted completely.\n\n',
 18 silly publish   readmeFilename: 'README.md',
-18 silly publish   gitHead: '308443adca69e5c2fe65589990ab9d50e6532054',
+18 silly publish   gitHead: '60e5e6bc843fb2d06c2368f45167355c1964dca7',
 18 silly publish   description: 'Leveraging object-oriented JavaScript to create a highly scalable, multi-layered API (for larger applications). Use multiple ORMs, environment-specific configuration settings, and much more. Still a WIP.',
 18 silly publish   _id: 'parallax@1.0.0',
-18 silly publish   _shasum: 'b0089b9dbb34a02a42cd89426427bebaaa4e6d17',
+18 silly publish   _shasum: '9c44fa5aa03bce49046e434ccf863c5156e64311',
 18 silly publish   _from: '.' }
 19 verbose getPublishConfig undefined
-20 verbose stack Error: This package has been marked as private
-20 verbose stack Remove the 'private' field from the package.json to publish it.
-20 verbose stack     at publish_ (/Users/kahboom/.node/lib/node_modules/npm/lib/publish.js:98:5)
-20 verbose stack     at Array.<anonymous> (/Users/kahboom/.node/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
-20 verbose stack     at LOOP (/Users/kahboom/.node/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
-20 verbose stack     at LOOP (/Users/kahboom/.node/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
-20 verbose stack     at chain (/Users/kahboom/.node/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
-20 verbose stack     at /Users/kahboom/.node/lib/node_modules/npm/lib/publish.js:73:5
-20 verbose stack     at RES (/Users/kahboom/.node/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
-20 verbose stack     at f (/Users/kahboom/.node/lib/node_modules/npm/node_modules/once/once.js:17:25)
-20 verbose stack     at /Users/kahboom/.node/lib/node_modules/npm/lib/cache.js:350:14
-20 verbose stack     at /Users/kahboom/.node/lib/node_modules/npm/node_modules/write-file-atomic/index.js:29:15
-21 verbose cwd /Users/kahboom/Projects/parallax
-22 error Darwin 14.4.0
-23 error argv "node" "/Users/kahboom/.node/bin/npm" "publish"
-24 error node v0.12.7
-25 error npm  v2.13.2
-26 error This package has been marked as private
-26 error Remove the 'private' field from the package.json to publish it.
-27 error If you need help, you may report this error at:
-27 error     <https://github.com/npm/npm/issues>
-28 verbose exit [ 1, true ]
+20 silly mapToRegistry name parallax
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/parallax
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/kahboom/.npm/parallax/1.0.0/package.tgz
+26 verbose request uri https://registry.npmjs.org/parallax
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 19:48:11
+29 verbose request using bearer token for auth
+30 verbose request id 72b5ad2768ec2167
+31 http request PUT https://registry.npmjs.org/parallax
+32 http 403 https://registry.npmjs.org/parallax
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=60',
+33 verbose headers   'content-length': '100',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Tue, 28 Jul 2015 23:48:12 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-jfk1034-JFK',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1438127291.720584,VS0,VE514' }
+34 verbose request invalidating /Users/kahboom/.npm/registry.npmjs.org/parallax on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: You do not have permission to publish 'parallax'. Are you logged in as the correct user? : parallax
+36 verbose stack     at CachingRegistryClient.<anonymous> (/Users/kahboom/.node/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+36 verbose stack     at Request._callback (/Users/kahboom/.node/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+36 verbose stack     at Request.self.callback (/Users/kahboom/.node/lib/node_modules/npm/node_modules/request/request.js:197:22)
+36 verbose stack     at Request.emit (events.js:110:17)
+36 verbose stack     at Request.<anonymous> (/Users/kahboom/.node/lib/node_modules/npm/node_modules/request/request.js:1050:14)
+36 verbose stack     at Request.emit (events.js:129:20)
+36 verbose stack     at IncomingMessage.<anonymous> (/Users/kahboom/.node/lib/node_modules/npm/node_modules/request/request.js:996:12)
+36 verbose stack     at IncomingMessage.emit (events.js:129:20)
+36 verbose stack     at _stream_readable.js:908:16
+36 verbose stack     at process._tickCallback (node.js:355:11)
+37 verbose statusCode 403
+38 verbose pkgid parallax
+39 verbose cwd /Users/kahboom/Projects/parallax
+40 error Darwin 14.4.0
+41 error argv "node" "/Users/kahboom/.node/bin/npm" "publish"
+42 error node v0.12.7
+43 error npm  v2.13.2
+44 error code E403
+45 error You do not have permission to publish 'parallax'. Are you logged in as the correct user? : parallax
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
