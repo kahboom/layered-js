@@ -1,0 +1,40 @@
+{
+  "db": {
+    "username": "test",
+    "password": "test",
+    "database": "test",
+    "options": {
+      "host": "127.0.0.1",
+      "port": 3306,
+      "protocol": "tcp",
+      "maxConcurrentQueries": 100,
+      "dialect": "mysql",
+      "omitNull": true,
+      "native": false,
+      "define": {
+        "underscored": false,
+        "freezeTableName": false,
+        "syncOnAssociation": true,
+        "charset": "utf8",
+        "collate": "utf8_general_ci",
+        "timestamps": true
+      },
+      "sync": {
+        "force": false
+      },
+      "syncOnAssociation": true,
+      "pool": {
+        "maxConnections": 5,
+        "maxIdleTime": 30
+      },
+      "language": "en"
+    }
+  },
+  "orm": "Sequelize",
+  "settings": {
+    "baseUrl": "http://localhost",
+    "port": 7000,
+    "secret": "secret",
+    "title": "API"
+  }
+}
