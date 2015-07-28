@@ -1,0 +1,70 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/Users/kahboom/.node/bin/npm', 'publish' ]
+2 info using npm@2.13.2
+3 info using node@v0.12.7
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/kahboom/Projects/parallax',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/kahboom/.npm/parallax/1.0.0/package.tgz not in flight; packing
+10 verbose tar pack [ '/Users/kahboom/.npm/parallax/1.0.0/package.tgz',
+10 verbose tar pack   '/Users/kahboom/Projects/parallax' ]
+11 verbose tarball /Users/kahboom/.npm/parallax/1.0.0/package.tgz
+12 verbose folder /Users/kahboom/Projects/parallax
+13 info prepublish parallax@1.0.0
+14 verbose addLocalTarball adding from inside cache /Users/kahboom/.npm/parallax/1.0.0/package.tgz
+15 silly cache afterAdd parallax@1.0.0
+16 verbose afterAdd /Users/kahboom/.npm/parallax/1.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/kahboom/.npm/parallax/1.0.0/package/package.json written
+18 silly publish { name: 'parallax',
+18 silly publish   version: '1.0.0',
+18 silly publish   private: true,
+18 silly publish   author: { name: 'Intellinode', email: 'info@intellinode.com' },
+18 silly publish   main: 'app.js',
+18 silly publish   scripts: { start: 'node app' },
+18 silly publish   dependencies:
+18 silly publish    { bcrypt: '^0.8.1',
+18 silly publish      'body-parser': '^1.12.0',
+18 silly publish      'connect-multiparty': '^1.2.5',
+18 silly publish      express: '^4.12.0',
+18 silly publish      lodash: '^3.9.3',
+18 silly publish      'method-override': '^2.3.1',
+18 silly publish      morgan: '^1.5.1',
+18 silly publish      mysql: '^2.5.5',
+18 silly publish      sequelize: '^2.0.3' },
+18 silly publish   readme: '# parallax\nLeveraging object-oriented JavaScript to create a highly scalable, multi-layered API (for larger applications). Use multiple ORMs, environment-specific configuration settings, and much more. Still a WIP.\n\nOrder of communication: `api/controller > service layer > repository layer > models`\n\n`/src/`:\n- `/api`: Used to route requests, currently using ExpressJS as an example, but is not necessary. These can be thought of as controllers. Instantiates models as necessary.\n-  `/models`: Define schemas for multiple ORMs for each model. This section needs to be improved to be more adaptable across each ORM. Still a work-in-progress.\n- `/repositories`: A repository layer! Not usually seen or used in node.js, but it\'s a very useful abstraction layer to allow for multiple data stores. This is often used for large-scale applications, especially those that have to deal with integration of third-party or legacy software.\n- `/services`: Services, which can be created for working specifically with third-party applications or APIs, such as Facebook. This data is not usually stored so wouldn\'t need to have a repository or model.\n- `/utils`: A convenience utility, not really used much in this application except for containing additional authentication processing. This should be moved elsewhere, or maybe omitted completely.\n\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: '308443adca69e5c2fe65589990ab9d50e6532054',
+18 silly publish   description: 'Leveraging object-oriented JavaScript to create a highly scalable, multi-layered API (for larger applications). Use multiple ORMs, environment-specific configuration settings, and much more. Still a WIP.',
+18 silly publish   _id: 'parallax@1.0.0',
+18 silly publish   _shasum: 'b0089b9dbb34a02a42cd89426427bebaaa4e6d17',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 verbose stack Error: This package has been marked as private
+20 verbose stack Remove the 'private' field from the package.json to publish it.
+20 verbose stack     at publish_ (/Users/kahboom/.node/lib/node_modules/npm/lib/publish.js:98:5)
+20 verbose stack     at Array.<anonymous> (/Users/kahboom/.node/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+20 verbose stack     at LOOP (/Users/kahboom/.node/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+20 verbose stack     at LOOP (/Users/kahboom/.node/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+20 verbose stack     at chain (/Users/kahboom/.node/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+20 verbose stack     at /Users/kahboom/.node/lib/node_modules/npm/lib/publish.js:73:5
+20 verbose stack     at RES (/Users/kahboom/.node/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+20 verbose stack     at f (/Users/kahboom/.node/lib/node_modules/npm/node_modules/once/once.js:17:25)
+20 verbose stack     at /Users/kahboom/.node/lib/node_modules/npm/lib/cache.js:350:14
+20 verbose stack     at /Users/kahboom/.node/lib/node_modules/npm/node_modules/write-file-atomic/index.js:29:15
+21 verbose cwd /Users/kahboom/Projects/parallax
+22 error Darwin 14.4.0
+23 error argv "node" "/Users/kahboom/.node/bin/npm" "publish"
+24 error node v0.12.7
+25 error npm  v2.13.2
+26 error This package has been marked as private
+26 error Remove the 'private' field from the package.json to publish it.
+27 error If you need help, you may report this error at:
+27 error     <https://github.com/npm/npm/issues>
+28 verbose exit [ 1, true ]
