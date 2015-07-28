@@ -1,4 +1,4 @@
-# Parallax
+# parallax
 Leveraging object-oriented JavaScript to create a highly scalable, multi-layered API (for larger applications). Use multiple ORMs, environment-specific configuration settings, and much more. Still a WIP.
 
 Order of communication: `api/controller > service layer > repository layer > models`
