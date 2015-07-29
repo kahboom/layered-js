@@ -10,3 +10,8 @@ Order of communication: `api/controller > service layer > repository layer > mod
 - `/services`: Services, which can be created for working specifically with third-party applications or APIs, such as Facebook. This data is not usually stored so wouldn't need to have a repository or model.
 - `/utils`: A convenience utility, not really used much in this application except for containing additional authentication processing. This should be moved elsewhere, or maybe omitted completely.
 
+
+If you'd like to contribute, feel free to open a PR.
+
+Available under the MIT license.
+
