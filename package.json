@@ -6,7 +6,7 @@
     "parallax",
     "parallax2"
   ],
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "author": "Rachel Yordán <rachel@nerdycode.com> (http://www.nerdycode.com)",
   "main": "app.js",
