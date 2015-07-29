@@ -1,11 +1,14 @@
 {
   "name": "parallax2",
-  "version": "1.0.0",
+  "description": "Example of layered API using object-oriented JavaScript.",
+  "keywords": [
+    "api",
+    "parallax",
+    "parallax2"
+  ],
+  "version": "1.0.1",
   "private": false,
-  "author": {
-    "name": "Rachel Yordán",
-    "email": "rachel@nerdycode.com"
-  },
+  "author": "Rachel Yordán <rachel@nerdycode.com> (http://www.nerdycode.com)",
   "main": "app.js",
   "scripts": {
     "start": "node app"

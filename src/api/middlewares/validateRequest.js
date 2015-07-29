@@ -22,22 +22,20 @@ module.exports = function(req, res, next) {
 
     if (token || key) {
         try {
-            //var decoded = jwt.decode(token, require('../config/secret.js')());
             var decoded = jwt.decode(token, config['settings']['secret']);
 
             if (decoded.exp <= Date.now()) {
                 res.status(400);
 
                 res.json({
-                    "status": 400,
-                    "message": "Token Expired"
+                    'status': 400,
+                    'message': 'Token Expired'
                 });
 
                 return;
             }
 
             // Authorize the user to see if s/he can access our resources
-            //var dbUser = validateUser(key); // The key would be the logged in user's username
             var dbUser = validateUser(decoded.user.name);
 
             if (dbUser) {
@@ -47,18 +45,17 @@ module.exports = function(req, res, next) {
                     res.status(403);
 
                     res.json({
-                        "status": 403,
-                        "message": "Not Authorized"
+                        'status': 403,
+                        'message': 'Not Authorized'
                     });
 
                     return;
                 }
             } else {
-                // No user with this name exists, respond back with a 401
                 res.status(401);
                 res.json({
-                    "status": 401,
-                    "message": "Invalid User"
+                    'status': 401,
+                    'message': 'Invalid User'
                 });
 
                 return;
@@ -67,17 +64,17 @@ module.exports = function(req, res, next) {
             res.status(500);
 
             res.json({
-                "status": 500,
-                "message": "Oops something went wrong",
-                "error": err
+                'status': 500,
+                'message': 'Oops something went wrong',
+                'error': err
             });
         }
     } else {
         res.status(401);
 
         res.json({
-            "status": 401,
-            "message": "Invalid Token or Key"
+            'status': 401,
+            'message': 'Invalid Token or Key'
         });
 
         return;
