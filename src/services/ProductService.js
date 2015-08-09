@@ -9,6 +9,7 @@ var ProductRepository = require('../repositories/ProductRepository.js');
 // ---------------------- Class/Constructor ---->>
 
 function ProductService(model, modelName, params) {
+    // Pass Arguments to Parent Constructor
     ProductRepository.call(this, model, modelName, params);
 
     this.layerName = 'ProductService';
@@ -31,15 +32,18 @@ function ProductService(model, modelName, params) {
 // ---------------------- Prototypes ---->>
 
 function inheritPrototype(ProductService, ProductRepository) {
-    var prototype = Object.create(ProductRepository.prototype); // Create Object
-    prototype.constructor = ProductService; // Augment Object
-    ProductService.prototype = prototype; // Assign Object
+    // Create Temporary Object with Parent's Constructor Methods
+    var prototype = Object.create(ProductRepository.prototype);
+
+    // Augment Object; Reset the Temporary Object's Constructor
+    prototype.constructor = ProductService;
+
+    // Assign Temporary Object as Child's Prototype
+    ProductService.prototype = prototype;
 }
 
 inheritPrototype(ProductService, ProductRepository);
 
-// Find All with Each of its Associations
-ProductService.prototype.findAllWithAssociations = function findAllWithAssociations(cb) {};
 
 // Find One Instance with its Associations
 ProductService.prototype.findWithAssociations = function findWithAssociations(cb) {};
@@ -47,5 +51,6 @@ ProductService.prototype.findWithAssociations = function findWithAssociations(cb
 
 // Set Associations
 ProductService.prototype.setAssociations = function setAssociations(original, cb) {};
+
 
 module.exports = ProductService;
