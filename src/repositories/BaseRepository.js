@@ -6,6 +6,12 @@
 
 // ---------------------- Base Class ---->>
 
+// The BaseRepository constructor should always be empty,
+// otherwise properties defined here will be added to the prototype chain.
+// We only want to use the child constructor's properties in this case (`<name>Repository`).
+// Add any reusable properties to one of its prototype methods.
+// The parent will never be modified once the child is,
+// because only the parent’s prototypes are inherited.
 function BaseRepository() {}
 
 

@@ -52,8 +52,11 @@ function inheritPrototype(ProductService, ProductRepository) {
 }
 
 // Call inheritPrototype()
-// Now our Child class `ProductService` has inherited the `ProductRepository` prototype chain
+// Now our Child class `ProductService` has inherited the `ProductRepository` prototype chain.
 // YAY! :D
+
+// The `ProductRepository` class itself does not have methods,
+// but, instead inherits them from the `BaseRepository` and its prototype chain.
 inheritPrototype(ProductService, ProductRepository);
 
 
