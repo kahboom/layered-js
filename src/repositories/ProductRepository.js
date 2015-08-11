@@ -32,8 +32,7 @@ function extend(Child, Parent) {
     // Reset the child prototype
     Child.prototype.constructor = Child;
 
-    // The uber method here is just sugar that Douglas Crockford creates to
-    // access the parent implementation of a method by reference.
+    // Sugar to access the parent implementation of a method by reference.
     Child.uber = Parent.prototype;
 }
 
