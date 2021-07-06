@@ -1,4 +1,4 @@
-### NOTE: This is quite an outdated (and questionable) approach to building an application and was used primarily for learning. Please use keep your code decoupled and DRY.
+### NOTE: This is quite an outdated (and questionable) approach to building an application and was used primarily for learning. Please keep your code decoupled and DRY.
 
 Experimenting with object-oriented JavaScript to create a multi-layered API. Use multiple data stores, interchangeable ORM, environment-specific configuration settings, etc. Still a WIP.
 
